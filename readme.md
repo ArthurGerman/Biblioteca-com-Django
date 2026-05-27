@@ -1,7 +1,7 @@
 # Projeto Biblioteca com Django
-Aluno: Arthur Germano da Cunha Silva
-Ferramenta escolhida: Django
-Descrição da atividade: Crud de uma Biblioteca com relacionamento 1:n entre duas entidades: Autor e Livro. Cada autor pode ter vários livros, mas cada livro tem apenas um autor.
+- Aluno: Arthur Germano da Cunha Silva
+- Ferramenta escolhida: Django
+- Descrição da atividade: Crud de uma Biblioteca com relacionamento 1:n entre duas entidades: Autor e Livro. Cada autor pode ter vários livros, mas cada livro tem apenas um autor.
 
 ## Clonando o projeto
 
