@@ -1,0 +1,27 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+
+<h1>{{ object.titulo }}</h1>
+
+<p>
+  <strong>Autor:</strong>
+  <a href="{% url 'autor-detail' object.autor.pk %}">
+    {{ object.autor.nome }}
+  </a>
+</p>
+
+<p>
+  <strong>Publicado em:</strong>
+  {{ object.ano_publicacao }}
+</p>
+
+{% if object.isbn %}
+  <p><strong>ISBN:</strong> {{ object.isbn }}</p>
+{% endif %}
+
+<hr>
+<a href="{% url 'livro-update' object.pk %}">Editar</a>
+<a href="{% url 'livro-delete' object.pk %}">Deletar</a>
+<a href="{% url 'livro-list' %}">Voltar</a>
+
+{% endblock %}

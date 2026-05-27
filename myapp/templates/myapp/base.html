@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca</title>
+</head>
+<body>
+  <nav>
+    <a href="{% url 'autor-list' %}">Autores</a> |
+    <a href="{% url 'livro-list' %}">Livros</a>
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>

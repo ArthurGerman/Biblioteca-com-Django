@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+
+<h1>Deletar autor</h1>
+<p>Tem certeza que deseja deletar <strong>{{ object.nome }}</strong>?</p>
+
+{% if object.livros.exists %}
+  <p style="color: red;">
+    Atenção: {{ object.livros.count }} livro(s) vinculado(s) também serão deletados.
+  </p>
+  <ul>
+    {% for livro in object.livros.all %}
+      <li>{{ livro.titulo }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirmar exclusão</button>
+  <a href="{% url 'autor-list' %}">Cancelar</a>
+</form>
+
+{% endblock %}
