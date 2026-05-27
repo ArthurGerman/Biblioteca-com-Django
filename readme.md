@@ -8,12 +8,13 @@
 Para rodar o projeto, siga estes passos
 
 ```bash
-# 1. Clonando o projeto
+# 1. Clonando o projeto no WSL
 git clone https://github.com/ArthurGerman/Biblioteca-com-Django
 cd crud_django
 
 # 2. Criar e ativar o virtualenv
-python -m venv venv
+sudo apt install python3.12-venv
+python3 -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 
 # 3. Instalar as dependências
